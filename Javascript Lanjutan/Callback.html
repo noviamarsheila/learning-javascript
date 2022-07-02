@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Callback</title>
+	</head>
+	<body>
+		<p>Callback : sebuah function yg dikirimkan sebagai parameter function lain</p>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		<script>
+			// Synchronous callback
+			function halo(nama) {
+				alert(`Hallo, ${nama}`);
+			}
+			function tampilkanPesan(callback) {
+				const nama = prompt("masukkan nama :");
+				callback(nama);
+			}
+			tampilkanPesan(halo);
+
+			//
+			//
+			// const mhs = [
+			// 	{
+			// 		nama: "Novia Marsheila Louisyana",
+			// 		nrp: "202151082",
+			// 		email: "noviasheila123@gmail.com",
+			// 		jurusan: "Teknik Informatika",
+			// 		idDosenWali: 1,
+			// 	},
+			// 	{
+			// 		nama: "Akhmad Rival Setiawan",
+			// 		nrp: "202151083",
+			// 		email: "rival@gmail.com",
+			// 		jurusan: "Teknik Industri",
+			// 		idDosenWali: 2,
+			// 	},
+			// 	{
+			// 		nama: "Lavenia Berlian Nurfadila",
+			// 		nrp: "202151084",
+			// 		email: "berlian@gmail.com",
+			// 		jurusan: "Farmasi",
+			// 		idDosenWali: 2,
+			// 	},
+			// ];
+			// console.log("mulai");
+			// mhs.forEach((m) => {
+			// 	for (i = 0; i < 100000000; i++) {
+			// 		let date = new Date();
+			// 	}
+			// 	console.log(m.nama);
+			// });
+			// console.log("selesai");
+
+			//
+			// Asynchronous Callback
+			//
+			function getDataMahasiswa(url, success, error) {
+				let xhr = new XMLHttpRequest();
+
+				xhr.onreadystatechange = function () {
+					if (xhr.readyState === 4) {
+						if (xhr.status === 200) {
+							success(xhr.response);
+						} else if (xhr.status === 404) {
+							error();
+						}
+					}
+				};
+
+				xhr.open("get", url);
+				xhr.send();
+			}
+
+			console.log("mulai");
+
+			getDataMahasiswa(
+				"data/mahasiswa.json",
+				(results) => {
+					const mhs = JSON.parse(results);
+					mhs.forEach((m) => console.log(m.email));
+				},
+				() => {}
+			);
+
+			console.log("selesai");
+
+			//
+			//
+			//  Jquery version
+			//
+
+			// console.log("mulai");
+
+			// $.ajax({
+			// 	url: "data/mahasiswa.json",
+			// 	success: (mhs) => {
+			// 		mhs.forEach((m) => console.log(mhs.nama));
+			// 	},
+			// 	error: (e) => {
+			// 		console.log(e.responseText);
+			// 	},
+			// });
+
+			// console.log("selesai");
+		</script>
+	</body>
+</html>

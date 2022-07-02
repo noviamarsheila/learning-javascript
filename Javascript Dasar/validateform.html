@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form action="" name="myForm" onsubmit="return handleSubmit()">
+			<input type="text" name="nama" />
+			<button type="submit">Submit</button>
+		</form>
+
+		<script>
+			function handleSubmit() {
+				let x = document.forms["myForm"]["nama"].value;
+				if (x == "") {
+					alert("Tidak boleh kosong!");
+					return false;
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>For In , For Of</title>
+	</head>
+	<body>
+		<ul>
+			<li class="nama">Sheila</li>
+			<li class="nama">Berlian</li>
+			<li class="nama">Rival</li>
+		</ul>
+		<script>
+			// For of
+			// const mhs = ["Sheila", "Rival", "Berlian"];
+
+			// for (const [i, m] of mhs.entries()) {
+			// 	console.log(m);
+			// }
+
+			// const nama = "Novia Marsheila Louisyana";
+			// for (const a of nama) {
+			// 	console.log(a);
+			// }
+
+			// nodelist
+			// const liNama = document.querySelectorAll(".nama");
+			// liNama.forEach((n) => console.log(n.textContent));
+			// for (g of liNama) {
+			// 	console.log(g.innerHTML);
+			// }
+
+			//
+			// // arguments
+			// function jumlahkanAngka() {
+			// 	jumlah = 0;
+			// 	for (h of arguments) {
+			// 		jumlah += h;
+			// 	}
+			// 	return jumlah;
+			// }
+
+			// console.log(jumlahkanAngka(1, 2, 3, 4, 5, 6, 7, 8));
+
+			//
+			// for in
+			// untuk properti pada object
+			//
+
+			const mhs = {
+				nama: "sheila",
+				umur: 18,
+				email: "sheila@gmail.com",
+			};
+			for (a in mhs) {
+				console.log(a);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variable Scope</title>
+</head>
+
+<body>
+    <h3>Hello, Novia Marsheila Louisyana</h3>
+
+    <script>
+        // "use strict";
+        //  var a = 1; // global scope atau window scope (bisa digunakan dimanapun di program kita)
+
+        // function test() {
+        //     var a = 2;
+        // }
+        // test();
+        // console.log(a);
+
+        var a = 1;
+
+        function test(a) {
+            console.log(a);
+        }
+        test(2);
+        console.log(a);
+    </script>
+</body>
+
+</html>

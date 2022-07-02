@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Prototype</title>
+	</head>
+	<body>
+		<h1>Hallo</h1>
+
+		<script>
+			// cara untuk membuat object dalam js
+			//
+			// Object literal - tidak efektif untuk object yang banyak
+			//
+			// let mahasiswa = {
+			// 	nama: "Novia Marsheila Louisyana",
+			// 	energi: 10,
+			// 	makan: function (porsi) {
+			// 		this.energi = this.energi + porsi;
+			// 		console.log(`Halo ${this.nama} , Selamat makan!`);
+			// 	},
+			// };
+			//
+			// Function Declaration - menyimpan duplikat pada masing2 object
+			//
+
+			function Mahasiswa(nama, energi) {
+				let mahasiswa = {};
+				mahasiswa.nama = nama;
+				mahasiswa.energi = energi;
+
+				mahasiswa.makan = function (porsi) {
+					this.energi += porsi;
+					console.log(`Halo ${this.nama} , Selamat makan!`);
+				};
+				mahasiswa.main = function (jam) {
+					this.energi -= jam;
+					console.log(`Halo ${this.nama} , Selamat bermain!`);
+				};
+				return mahasiswa;
+			}
+
+			let sheila = Mahasiswa("Novia Marsheila", 10);
+			let berlian = Mahasiswa("Lavenia Berlian", 10);
+
+			//
+			// Constractor function
+			//
+			// function Mahasiswa(nama, energi) {
+			// 	this.nama = nama;
+			// 	this.energi = energi;
+
+			// 	this.makan = function (porsi) {
+			// 		this.energi += porsi;
+			// 		console.log(`Halo ${this.nama} , Selamat makan!`);
+			// 	};
+			// 	this.main = function (jam) {
+			// 		this.energi -= jam;
+			// 		console.log(`Halo ${this.nama} , Selamat bermain!`);
+			// 	};
+			// }
+
+			// let sheila = new Mahasiswa("sheila", 12);
+		</script>
+	</body>
+</html>

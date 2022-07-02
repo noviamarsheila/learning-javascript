@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Else If</title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+
+    <script>
+        // for (var nilaiAwal = 1; nilaiAwal <= 10; nilaiAwal++) {
+        //     console.log("Hello word " + nilaiAwal + "x");
+        // }
+        // var noAngkot = 1;
+        // var angkotBeroperasi = 8;
+        // var jmlAngkot = 10;
+
+        // while (noAngkot <= angkotBeroperasi) {
+        //     console.log("Angkot No. " + noAngkot + " beroperasi dengan baik");
+        //     noAngkot++;
+        // }
+        // for (noAngkot = angkotBeroperasi + 1; noAngkot <= jmlAngkot; noAngkot++) {
+        //     console.log("Angkot No. " + noAngkot + " sedang tidak beroperasi");
+        // }
+
+        // var angka = prompt("masukkan angka : ");
+        // if (angka % 2 == 0) {
+        //     alert(angka + " adalah bilangan genap");
+        // } else if (angka % 2 == 1) {
+        //     alert(angka + " adalah bilangan ganjil");
+        // } else {
+        //     alert("Yang anda masukkkan bukan angka!");
+        // }
+
+        let noAngkot = 1;
+        let jmlAngkot = 10;
+        let angkotBeroperasi = 6;
+
+        for (noAngkot; noAngkot <= jmlAngkot; noAngkot++) {
+            if (noAngkot <= angkotBeroperasi && noAngkot != 5) {
+                console.log("Angkot No. " + noAngkot + " beroperasi dengan baik");
+            } else if (noAngkot == 8 || noAngkot == 10 || noAngkot == 5) {
+                console.log("Angkot No. " + noAngkot + " sedang lembur");
+            } else {
+                console.log("Angkot No. " + noAngkot + " sedang tidak beroperasi");
+            }
+        }
+    </script>
+</body>
+
+</html>

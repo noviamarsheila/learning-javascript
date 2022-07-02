@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Filter, Map, reduce</title>
+	</head>
+	<body>
+		<script>
+			// Filter, Map , Reduce
+			//
+			// Contoh higher order function
+			// Array.prototype.map()
+			// Array.prototype.filter()
+			// Array.prototype.reduce()
+			//
+
+			const angka = [-1, 8, 9, 1, 4, -5, -4, 3, 2, 9];
+
+			// mencari angka yang >= 3
+			//
+			// const newAngka = [];
+			// for (let i = 0; i <script angka.length; i++) {
+			// 	if (angka[i] >= 3) {
+			// 		newAngka.push(angka[i]);
+			// 	}
+			// }
+			// console.log(newAngka);
+			//
+			//
+			// filter
+			// const newAngka = angka.filter(function (a) {
+			// 	return a >= 3;
+			// });
+			// console.log(newAngka);
+			//
+			// const newAngka = angka.filter((a) => a >= 3);
+			// console.log(newAngka);
+
+			//
+			// map
+			//kalikan semua anggka dengan 2
+			//
+			// const newAngka = angka.map((a) => a * 2);
+			// console.log(newAngka);
+			//
+
+			//
+			// reduce
+			//jumlahkan semua elemen dalam array
+			//
+			// const newAngka = angka.reduce((accumulator, currentvalue) => accumulator + currentvalue, 0);
+			// console.log(newAngka);
+			//
+
+			//
+			// method chaining
+			// gabungkan fungsi pada higher order function dalam 1x eksekusi
+			// cari angka yg > 5, hasilnya kali 3, jumlahkan
+			//
+			const hasil = angka
+				.filter((a) => a > 5)
+				.map((a) => a * 3)
+				.reduce((acc, crrv) => acc + crrv);
+			console.log(hasil);
+		</script>
+	</body>
+</html>

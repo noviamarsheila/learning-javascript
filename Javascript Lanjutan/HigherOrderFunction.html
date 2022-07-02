@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h3>Higher Order Function</h3>
+		<p>Function yg beroperasi pada function lain. Baik itu digunakan dalam argument, maupun sebagai return value</p>
+		<p>Memperlakukan function sebagai object</p>
+		<script>
+			// Higher Order Function -> function yg memiliki callback
+			// callback -> function yang didimpan sebagai argumen
+			function kerjakanTugas(matakuliah, selesai) {
+				console.log(`Mulai mengerjakan tugas ${matakuliah}`);
+				selesai();
+			}
+			function selesai() {
+				alert("Selesai mengerjakan tugas");
+			}
+			kerjakanTugas("pemrograman Web", selesai);
+
+			//
+			//
+			setTimeout(function () {
+				console.log("Hello world");
+			}, 1000);
+			//
+			//
+			//
+			// untuk abstraksi -> agar lebih simpel
+		</script>
+	</body>
+</html>

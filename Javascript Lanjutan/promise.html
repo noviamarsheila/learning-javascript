@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Promise</title>
+	</head>
+	<body>
+		<h4>Hello World</h4>
+
+		<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> -->
+		<script>
+			// $.ajax({
+			// 	url: "http://www.omdbapi.com/?apikey=dc106a55&s=avengers",
+			// 	success: (movies) => {
+			// 		console.log(movies);
+			// 	},
+			// });
+
+			//
+			// ajax versi vanilla javascript
+			//
+
+			// const xhr = new XMLHttpRequest();
+			// xhr.onreadystatechange = function () {
+			// 	if (xhr.status == 200) {
+			// 		if (xhr.readyState === 4) {
+			// 			console.log(JSON.parse(xhr.response));
+			// 		}
+			// 	} else {
+			// 		console.log(xhr.responseText);
+			// 	}
+			// };
+
+			// xhr.open("get", "http://www.omdbapi.com/?apikey=dc106a55&s=avengers");
+			// xhr.send();
+
+			//
+			//
+			//
+			// Javascript modern
+			// using fetch -> mengembalikan promise
+			//
+
+			// fetch("http://www.omdbapi.com/?apikey=dc106a55&s=avengers")
+			// 	.then((response) => response.json())
+			// 	.then((response) => console.log(response));
+
+			// promise : sebuah object yg merepresentasikan keberhasilan atau
+			// kegagalan dr sebuah
+			// event yg asynchronous yg terjadi di masa yang akan datang
+
+			// janji (terpenuhi/ingkar)
+			// states (fulfilled, rejected, pending)
+
+			// callback(resolve/rejected/finally)
+			// aksi (then/catch)
+
+			// promise sederhana
+			// let ditepati = true;
+			// const janji1 = new Promise((resolve, rejected) => {
+			// 	if (ditepati) {
+			// 		resolve("Janji telah ditepati");
+			// 	} else {
+			// 		rejected("Ingkar Janji");
+			// 	}
+			// });
+
+			// janji1.then((response) => console.log("oke : " + response)).catch((response) => console.log("Not Oke " + response));
+
+			//
+			//
+			// contoh 2
+			// let ditepati = false;
+			// const janji2 = new Promise((resolve, rejected) => {
+			// 	if (ditepati) {
+			// 		setTimeout(() => {
+			// 			resolve("Ditepati setelah beberapa waktu");
+			// 		}, 2000);
+			// 	} else {
+			// 		setTimeout(() => {
+			// 			resolve("Tidak Ditepati setelah beberapa waktu");
+			// 		}, 2000);
+			// 	}
+			// });
+			// console.log("mulai");
+			// // console.log(janji2.then(() => console.log(janji2)));
+			// janji2
+			// 	.finally(() => console.log("selesai menunggu"))
+			// 	.then((response) => console.log("oke : " + response))
+			// 	.catch((response) => console.log("Not Oke " + response));
+
+			// console.log("selesai");
+
+			// Promise.all ->banyak promise yg dijalankan sekaligus
+			const film = new Promise((resolve) => {
+				setTimeout(() => {
+					resolve([
+						{
+							nama: "sheila",
+							umur: 18,
+						},
+					]);
+				}, 1000);
+			});
+
+			const cuaca = new Promise((resolve) => {
+				setTimeout(() => {
+					resolve([
+						{
+							kota: "rembang",
+							cuaca: "mendung",
+						},
+					]);
+				}, 500);
+			});
+
+			// film.then((response) => console.log(response));
+			// cuaca.then((response) => console.log(response));
+
+			// Promise.all([film, cuaca]).then((response) => console.log(response));
+			Promise.all([film, cuaca]).then((response) => {
+				const [film, cuaca] = response;
+				console.log(film);
+				console.log(cuaca);
+			});
+		</script>
+	</body>
+</html>

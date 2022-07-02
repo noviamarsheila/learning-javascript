@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Var, Let, Const</title>
+	</head>
+	<body>
+		<script>
+			// Var / Let / Const
+			// Var -> Function Scope
+			// Let dan Const menganut Block Scope
+
+			//
+			// Js --> Function Scope
+			// function tes() {
+			// 	for (var i = 0; i < 10; i++) {
+			// 		console.log(i);
+			// 	}
+			// }
+			// tes();
+			// console.log(i);
+
+			//
+			// IIFE (Immediaely Invoke Function Expression)
+			// SIAF (Self Invoking Anonymous Function)
+			//
+			// var x = function(){
+
+			// };
+
+			// (function () {
+			// 	for (var i = 0; i < 10; i++) {
+			// 		console.log(i);
+			// 	}
+			// })();
+			//
+			//
+
+			//CONST
+			// untuk meminimalisir perubahan state
+			// Jika kita yakin dan tidak akan mengubah value dari variabelnya maka menggunakan Const
+			//
+			// const i = 10;
+			// console.log(i);
+
+			const mhs = {
+				nama: "Sheila",
+				umur: 18,
+			};
+
+			mhs.umur = 12;
+			console.log(mhs);
+		</script>
+	</body>
+</html>

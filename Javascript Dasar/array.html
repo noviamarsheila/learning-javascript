@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Intro</title>
+</head>
+
+<body>
+    <h2>Hello array</h2>
+
+    <script>
+        // array = variable yang bisa menyimpan banyak nilai (tipe data berbeda)
+        // mempermudah pengelolaan nilai/ value/ tipe data
+        // manajemen memori
+        // array pada javascript adalah object
+
+        // Key and value pair - membuat array
+        // key - index, value - nilai element
+        // index dimulai dari 0
+
+        var binatang = ["kucing", "kelinci", "monyet", "panda", "koala", "sapi"];
+        console.log(binatang[4]);
+        console.log(typeof binatang);
+        console.log(binatang.length);
+
+        var hari = ["senin", "selasa", "rabu", "kamis", "jum'at", "sabtu", "minggu"];
+        console.log(hari);
+
+        var myFunc = function() {
+            alert("Hello world!!");
+        };
+
+        var myArr = [1, 4, "sheila", myFunc, false];
+
+        // menyimpan array didalam array
+        var myArr2 = [1, 4, "sheila", myFunc, false, [4, 5, 6]];
+        console.log(myArr2[5][1]);
+    </script>
+</body>
+
+</html>

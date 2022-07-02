@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Destructuring function</title>
+	</head>
+	<body>
+		<script>
+			// function penjumlahanPerkalian(a, b) {
+			// 	return [a + b, a * b];
+			// }
+			// let c = penjumlahanPerkalian(2, 3)[1];
+			// console.log(c);
+			// const [jumlah, kali] = penjumlahanPerkalian(2, 3);
+			// console.log(kali);
+
+			// function kalkulasi(a, b) {
+			// 	return [a + b, a - b, a * b, a / b];
+			// }
+			// const [tambah, kurang, kali, bagi = "tidak ada"] = kalkulasi(2, 3);
+
+			//
+			// function kalkulasi(a, b) {
+			// 	return {
+			// 		tambah: a + b,
+			// 		kurang: a - b,
+			// 		kali: a * b,
+			// 		bagi: a / b,
+			// 	};
+			// }
+			// const { bagi, tambah, kurang, kali } = kalkulasi(2, 3);
+			// console.log(kali);
+			//
+
+			//
+			// Des Func Arguments
+			//
+			// const mhs1 = {
+			// 	nama: "sheila",
+			// 	umur: 18,
+			// 	email: "noviasheila123@gmail.com",
+			// };
+			// function cetakMhs(mhs) {
+			// 	return `Hallo nama saya ${mhs.nama} umur ${mhs.umur}`;
+			// }
+			// console.log(cetakMhs(mhs1));
+
+			//
+			const mhs1 = {
+				nama: "sheila",
+				umur: 18,
+				email: "noviasheila123@gmail.com",
+			};
+			function cetakMhs({ nama, umur }) {
+				return `Hallo nama saya ${nama} umur ${umur}`;
+			}
+			console.log(cetakMhs(mhs1));
+		</script>
+	</body>
+</html>

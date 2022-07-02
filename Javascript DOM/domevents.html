@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Dom Events</title>
+		<style>
+			* {
+				border: 2px solid #dedede;
+				padding: 15px;
+				margin: 15px;
+			}
+			html {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				max-width: 600px;
+				margin: 30px auto;
+				font-family: sans-serif;
+				color: #333;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="judul">Hello World</h1>
+		<div id="container">
+			<section id="a">
+				<p class="p1">paragraf 1</p>
+				<a href="http://instagram.com/sandhikagalih">Instagram Sandhika Galih</a>
+				<p class="p2">paragraf 2</p>
+				<p class="p3">paragraf 3</p>
+			</section>
+			<section id="b">
+				<p>paragraf 4</p>
+				<ul>
+					<li>item 1</li>
+					<li>item 2</li>
+					<li>item 3</li>
+				</ul>
+			</section>
+		</div>
+
+		<script>
+			// DOM Events -> merepresentasikan kejadian yang terjadi dalam DOM
+			// Events bisa dilakukan secara otomatis dengan API
+			// Event handler(inline html attribute, element method) / addEventListener
+			//
+			// Event Handler (cara lama)
+			// on<event>
+			// let p3 = document.querySelector(".p3");
+
+			// function ubahWarna() {
+			// 	p2.style.color = "red";
+			// }
+
+			// let p2 = document.querySelector(".p2");
+			// p2.onclick = ubahWarna;
+
+			// let p4 = document.querySelector("#b p");
+			// p4.addEventListener("click", function () {
+			// 	let ul = document.querySelector("#b ul");
+			// 	let li = document.createElement("li");
+			// 	let textLi = document.createTextNode("item baru");
+			// 	li.appendChild(textLi);
+			// 	ul.appendChild(li);
+			// });
+
+			// let p3 = document.querySelector(".p3");
+			// p3.onclick = function () {
+			// 	p3.style.backgroundColor = "lightblue";
+			// };
+			// p3.onclick = function () {
+			// 	p3.style.color = "red";
+			// };
+
+			// p3.addEventListener("click", function () {
+			// 	p3.style.backgroundColor = "lightblue";
+			// });
+			// p3.addEventListener("click", function () {
+			// 	p3.style.color = "red";
+			// });
+		</script>
+	</body>
+</html>

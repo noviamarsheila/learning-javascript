@@ -1,0 +1,23 @@
+[
+	{
+		"nama": "Novia Marsheila Louisyana",
+		"nrp": "202151082",
+		"email": "noviasheila123@gmail.com",
+		"jurusan": "Teknik Informatika",
+		"idDosenWali": 1
+	},
+	{
+		"nama": "Akhmad Rival Setiawan",
+		"nrp": "202151083",
+		"email": "rival@gmail.com",
+		"jurusan": "Teknik Industri",
+		"idDosenWali": 2
+	},
+	{
+		"nama": "Lavenia Berlian Nurfadila",
+		"nrp": "202151084",
+		"email": "berlian@gmail.com",
+		"jurusan": "Farmasi",
+		"idDosenWali": 2
+	}
+]

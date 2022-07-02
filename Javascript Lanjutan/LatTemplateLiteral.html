@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Latihan Template Literal</title>
+	</head>
+	<body>
+		<script>
+			// HTML Fragments
+
+			// const mhs = {
+			// 	nama: "Novia Marsheila Louisyana",
+			// 	umur: 18,
+			// 	nim: "202151082",
+			// 	email: "noviasheila123@gmail.com",
+			// };
+
+			// var el = `<div class="mhs">
+			//     <h2>${mhs.nama}</h2>
+			//     <span class="nim">${mhs.nim}</span>
+			//     </div>`;
+
+			// Looping
+
+			// const mhs = [
+			// 	{
+			// 		nama: "Novia Marsheila Louisyana",
+			// 		email: "noviasheila123@gmail.com",
+			// 	},
+			// 	{
+			// 		nama: "Lavenia Berlian Nurfadila",
+			// 		email: "berlian@gmail.com",
+			// 	},
+			// 	{
+			// 		nama: "Akhmad Rival Setiawan",
+			// 		email: "rival@gmail.com",
+			// 	},
+			// ];
+
+			// const el = `<div class="mhs">
+			//     ${mhs
+			// 						.map(
+			// 							(m) => `<ul>
+			//         <li>${m.nama}</li>
+			//         <li>${m.email}</li>
+			//         </ul>`
+			// 						)
+			// 						.join("")}
+			//     </div>`;
+
+			//
+			// Pengkondisian
+			// Ternary
+			// const lagu = {
+			// 	judul: "Tetap Dalam Jiwa",
+			// 	penyanyi: "Isyana Sarasvati",
+			// 	feat: "Rayi Putra",
+			// };
+
+			// const el = `<div class="lagu">
+			//         <ul>
+			//             <li>${lagu.penyanyi}</li>
+			//             <li>${lagu.judul} ${lagu.feat ? `(feat. ${lagu.feat})` : ``}</li>
+			//         </ul>
+			//     </div>`;
+
+			//
+			// Nested
+			// HTML Fragments bersarang
+			const mhs = {
+				nama: "Sheila",
+				semester: 2,
+				mataKuliah: ["Rekayasa Web", "Analisis dan Perancangan Sistem Informasi", "Pemrograman Sistem Interaktif", "Perancangan Sistem Berorientasi Object"],
+			};
+
+			function cetakMataKuliah(mataKuliah) {
+				return `<ol>
+                            ${mhs.mataKuliah.map((mk) => `<li>${mk}</li>`).join("")}
+                        </ol>`;
+			}
+
+			const el = `<div class="mhs">
+                    <h2>${mhs.nama}</h2>
+                    <span class="semester">Semester : ${mhs.semester}</span>
+                    <h4>Mata Kuliah</h4>
+                    ${cetakMataKuliah(mhs.mataKuliah)}
+                </div>`;
+
+			document.body.innerHTML = el;
+		</script>
+	</body>
+</html>

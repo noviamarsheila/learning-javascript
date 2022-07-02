@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOM Traversal</title>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="card">
+				<img src="img/satu.jpg" width="96" height="96" />
+				<span class="nama">Novia Marsheila</span>
+				<span class="telp">08123456789</span>
+				<span class="close">×</span>
+			</div>
+			<div class="card">
+				<img src="img/dua.jpg" width="96" height="96" />
+				<span class="nama">Lavenia Berlian</span>
+				<span class="telp">08123456789</span>
+				<span class="close">×</span>
+			</div>
+			<div class="card">
+				<img src="img/tiga.jpg" width="96" height="96" />
+				<span class="nama">Rival Setiawan</span>
+				<span class="telp">08123456789</span>
+				<span class="close">×</span>
+			</div>
+			<div class="card">
+				<img src="img/empat.jpg" width="96" height="96" />
+				<span class="nama">Saputra</span>
+				<span class="telp">08123456789</span>
+				<span class="close">×</span>
+			</div>
+		</div>
+
+		<script>
+			// const close = document.querySelector(".close");
+			// const card = document.querySelector(".card");
+
+			// close.addEventListener("click", function () {
+			// 	card.style.display = "none";
+			// });
+
+			//
+
+			// for (let i = 0; i < close.length; i++) {
+			// 	close[i].addEventListener("click", function (e) {
+			// 		// close[i].parentElement.style.display = "none";
+			// 		e.target.parentElement.style.display = "none";
+			// 	});
+			// }
+			const close = document.querySelectorAll(".close");
+
+			close.forEach(function (el) {
+				el.addEventListener("click", function (e) {
+					e.target.parentElement.style.display = "none";
+					e.preventDefault();
+					e.stopPropagation();
+				});
+			});
+
+			// const cards = document.querySelectorAll(".card");
+			// cards.forEach(function (card) {
+			// 	card.addEventListener("click", function (e) {
+			// 		alert("a");
+			// 	});
+			// });
+
+			const container = document.querySelector(".container");
+			container.addEventListener("click", function (e) {
+				if (e.target.className == "close") {
+					e.target.parentElement.style.display = "none";
+				}
+			});
+
+			// const nama = document.querySelector(".nama");
+			// console.log(nama.nextElementSibling.nextElementSibling);
+		</script>
+	</body>
+</html>

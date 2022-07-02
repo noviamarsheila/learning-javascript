@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rest Parameter</title>
+	</head>
+	<body>
+		<p>Rest parameter : merepresentasikan argumen pada func dengan jumlah yg tak terbatas</p>
+
+		<script>
+			// Rest Parameter
+			function myFunc(a, b, ...myArgs) {
+				return myArgs[2];
+			}
+			console.log(myFunc(1, 2, 3, 4, 5, 6));
+		</script>
+	</body>
+</html>

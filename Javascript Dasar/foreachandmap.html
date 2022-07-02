@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Foreach and Map</title>
+	</head>
+
+	<body>
+		<h3>Hai, Saya adalah Sheila. wkwk</h3>
+
+		<script>
+			// foreach
+			// map --> mengembalikan array
+
+			angka.forEach(function (item, index) {
+				console.log(item, index);
+			});
+
+			var angka2 = angka.map(function (e) {
+				return e * 2;
+			});
+
+			console.log(angka2);
+
+			angka.sort();
+			console.log(angka);
+
+			angka.sort((a, b) => {
+				return b - a;
+			});
+			console.log(angka);
+
+			// filter -> mengembalikan banyak nilai
+			// find -> mengembalikan satu nilai
+			var angka = [8, 5, 3, 6, 2, 1, 4];
+
+			var angka2 = angka.filter(function (x) {
+				return x >= 5;
+			});
+
+			console.log(angka2.join(" - "));
+
+			var angka2 = angka.find(function (x) {
+				return x < 5;
+			});
+			console.log(angka2);
+		</script>
+	</body>
+</html>

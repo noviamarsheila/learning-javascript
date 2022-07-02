@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>2.1</title>
+	</head>
+	<body>
+		<h4>Execution Context, Hoisting, Scope</h4>
+		<script>
+			// 2 fase pada execution context -> Creation & Execution
+			//
+			// console.log(nama);
+			// let nama = "Novia Marsheila Louisyana";
+
+			// creation phase pada global context
+			// nama var = undefined
+			// nama function = fn()
+			// hoisting
+			// window = global object
+			// this = window
+
+			// execution phase
+
+			// ***************************************
+
+			// var nama = "Sheila";
+			// var umur = 18;
+			// console.log(sayHello());
+
+			// function sayHello() {
+			// 	return `Hallo, nama saya ${nama} dan umur saya ${umur} tahun`;
+			// }
+
+			// function membuat local execution context
+			// yg didalamnya terdapat creation dan execution phase
+			// window
+			// arguments
+			// hoisting
+
+			// var nama = "Novia Sheila";
+			// var username = "@nvvamrsl";
+
+			// function cetakURL() {
+			// 	console.log(arguments);
+			// 	var instagramURL = "https://instagram.com/";
+			// 	return instagramURL + username;
+			// }
+
+			// console.log(cetakURL("@sheila", "@berlian"));
+
+			// function a() {
+			// 	console.log("ini a");
+
+			// 	function b() {
+			// 		console.log("ini b");
+
+			// 		function c() {
+			// 			console.log("ini c");
+			// 		}
+			// 		c();
+			// 	}
+			// 	b();
+			// }
+			// a();
+
+			//
+			//
+			//
+			function satu() {
+				var nama = "Sheila";
+				console.log(nama);
+			}
+
+			function dua() {
+				console.log(nama);
+			}
+
+			console.log(nama);
+			var nama = "Berlian";
+			satu();
+			dua("Rival");
+			console.log(nama);
+		</script>
+	</body>
+</html>

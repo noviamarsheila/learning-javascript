@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>This pada Arrow Function</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			.box {
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+				margin: 50px auto;
+				transition: 0.3s width, 0.3s height 0.3s, 0.3s margin-top 0.3s, 1s background-color;
+			}
+			.size {
+				width: 150px;
+				height: 150px;
+				margin-top: 25px;
+			}
+			.caption {
+				background-color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<script>
+			// Konsep this pada arrow function
+
+			// Constructor Function
+			// const Mahasiswa = function () {
+			// 	this.nama = "Sheila";
+			// 	this.umur = 18;
+			// 	this.sayHello = function () {
+			// 		console.log(`Halo nama saya ${this.nama} dan saya berumur ${this.umur} tahun`);
+			// 	};
+			// };
+
+			// const sheila = new Mahasiswa();
+
+			//
+			// Arrow Function
+			//
+			// const Mahasiswa = function () {
+			// 	this.nama = "Sheila";
+			// 	this.umur = 18;
+			// 	this.sayHello = () => {
+			// 		console.log(`Halo nama saya ${this.nama} dan saya berumur ${this.umur} tahun`);
+			// 	};
+			// };
+
+			// const sheila = new Mahasiswa();
+
+			//
+			// Object Literal
+			// Arrow function tdk memiliki this
+			//
+			// const mhs1 = {
+			// 	nama: "sheila",
+			// 	umur: 18,
+			// 	sayHello: () => {
+			// 		console.log(`Halo nama saya ${this.nama} dan saya berumur ${this.umur} tahun`);
+			// 	},
+			// };
+
+			// const Mahasiswa = function () {
+			// 	this.nama = "Sheila";
+			// 	this.umur = 18;
+			// 	this.sayHello = function () {
+			// 		console.log(`Halo nama saya ${this.nama} dan saya berumur ${this.umur} tahun`);
+			// 	};
+			// 	setInterval(() => {
+			// 		console.log(this.umur++);
+			// 	}, 1000);
+			// };
+
+			// const sheila = new Mahasiswa();
+
+			//
+			//
+			//
+			const box = document.querySelector(".box");
+			box.addEventListener("click", function () {
+				box.classList.toggle("size");
+				setTimeout(() => {
+					this.classList.toggle("caption");
+				}, 600);
+			});
+		</script>
+	</body>
+</html>

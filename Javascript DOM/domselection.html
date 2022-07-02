@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Dom Selection</title>
+		<style>
+			* {
+				border: 2px solid #dedede;
+				padding: 15px;
+				margin: 15px;
+			}
+
+			html {
+				margin: 0;
+				padding: 0;
+			}
+
+			body {
+				max-width: 600px;
+				margin: 30px auto;
+				font-family: sans-serif;
+				color: #333;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1 id="judul">Hello World</h1>
+		<div id="container">
+			<section id="a">
+				<p class="p1">paragraf 1</p>
+				<a href="http://instagram.com/sandhikagalih">Instagram Sandhika Galih</a>
+				<p class="p2">paragraf 2</p>
+				<p class="p3">paragraf 3</p>
+			</section>
+			<section id="b">
+				<p>paragraf 4</p>
+				<ul>
+					<li>item 1</li>
+					<li>item 2</li>
+					<li>item 3</li>
+				</ul>
+			</section>
+		</div>
+
+		<script>
+			// Method acces document
+			// hasil dari method
+			// getElementById  - element
+			// getElementsByTagName - HTML Collection
+			// getElementsByClassName - HTML Collection
+			// querySelector - element
+			// querySelectorAll - NodeList
+
+			// var judul = document.getElementById("judul");
+			// judul.textContent = "Hello, Sheila";
+			// judul.style.color = "red";
+			// judul.style.backgroundColor = "pink";
+			// judul.style.textDecoration = "underline";
+
+			//
+			// var para = document.getElementsByTagName("p");
+			// for (i = 0; i < para.length; i++) {
+			// 	para[i].style.backgroundColor = "purple";
+			// 	para[i].style.color = "#fff";
+			// }
+			//
+			// var h1 = document.getElementsByTagName("h1")[0];
+			// h1.textContent = "Hai";
+			//
+			// var kelas = document.getElementsByClassName("p2");
+			// kelas[0].style.textDecoration = "underline";
+			//
+			// var coba = document.querySelector("#b p");
+			// coba.style.color = "purple";
+			// coba.style.backgroundColor = "red ";
+
+			// var item = document.querySelector("#b ul li:nth-child(2)");
+			// item.style.backgroundColor = "orange";
+			//
+			// var semua = document.querySelectorAll("p");
+			// for (i = 0; i < semua.length; i++) {
+			// 	semua[i].style.color = "darkgreen";
+			// }
+			//
+			// Mengubah noderoot
+			var secB = document.getElementById("b");
+			var p4 = secB.querySelector("p");
+		</script>
+	</body>
+</html>

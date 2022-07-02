@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Spread Operator</title>
+	</head>
+	<body>
+		<p>Spread Operator : Operator yg memecah iterables menjadi single element</p>
+
+		<script>
+			// Spread Operator
+			// console.log(...mhs[0]);
+
+			// menggabungkan > 2 array
+			// const mhs = ["Sheila", "Rival", "Berlian", "Putra"];
+			// const dosen = ["Tiwi", "Hendra", "Winda"];
+			// const orang = [...mhs, "Aji", ...dosen];
+			// console.log(orang);
+			//
+			//
+			// Copy array
+			const mhs = ["Sheila", "Rival", "Berlian", "Putra"];
+			const mhs1 = [...mhs];
+			mhs1[0] = "Lala";
+			console.log(mhs1);
+		</script>
+	</body>
+</html>

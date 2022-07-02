@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+</head>
+
+<body>
+    <h3>Hello guys!!</h3>
+    <h5>Part Object Javascript</h5>
+
+    <script>
+        // Object - Kumpulan nilai yang memiliki nama (object adalah array yang lebih sakti)
+        // Dalam Js , Object adalah kunci
+        // Object literal, function declaration, constructor function(Keyword new), object.create
+
+        // console.log(mahasiswa.nama);
+
+        //     var Orang = {
+        //         nama: "Novia Marsheila Louisyana",
+        //         umur: 18,
+        //         status: "mahasiswa",
+        //         IPSemester: [3.8, 3.55, 3.65, 3.45],
+        //         alamat: {
+        //             jalan: "Jl. Pamotan",
+        //             kota: "Rembang",
+        //             provinsi: "Jawa tengah",
+        //         },
+        //         sapa: function() {
+        //             return "hai nama saya " + this.nama;
+        //         },
+        //     };
+
+        //
+        //
+        //
+        // Membuat Object
+        // Object Literal
+        // var mahasiswa = {
+        //     nama: "Novia Marsheila Louisyana",
+        //     lulus: false,
+        //     IPSemester: [3.8, 3.55, 3.65, 3.45],
+        //     IPKumulatif: function() {
+        //         var total = 0;
+        //         var ips = this.IPSemester;
+        //         for (var i = 0; i <script ips.length; i++) {
+        //             total += ips[i];
+        //         }
+        //         return total / ips.length;
+        //     },
+        // };
+        //
+        //
+        //
+        // Membuat Object
+        // Dengan function declaration
+        // function buatObjectMahasiswa(nama, nim, email, jurusan) {
+        //     var mhs = {};
+        //     mhs.nama = nama;
+        //     mhs.nim = nim;
+        //     mhs.email = email;
+        //     mhs.jurusan = jurusan;
+        //     return mhs;
+        // }
+
+        // var mhs3 = buatObjectMahasiswa("Sheila", "202151082", "sheila@gmail.com", "Teknik Informatika");
+
+        //
+        //
+        //
+        // Membuat Object
+        // Dengan function Constructor (Nama function diawali dg huruf kapital)
+        // function Mahasiswa(nama, nim, email, jurusan) {
+        //     this.nama = nama;
+        //     this.nim = nim;
+        //     this.email = email;
+        //     this.jurusan = jurusan;
+        // }
+        // var mhs4 = new Mahasiswa("Sheila", "202151082", "sheila@gmail.com", "Teknik Informatika");
+        // var mhs5 = new Mahasiswa("Berlian", "202151090", "berlian@gmail.com", "Teknik Mesin");
+        //
+        //
+        //this mengembalikan object global
+        // function halo() {
+        //     var obj = {};
+        //     console.log(this);
+        //     console.log("halo");
+        // }
+        // window.halo();
+        // this.halo();
+        //
+        //
+        //this mengembalikan object itu sendiri
+        // var obj = {};
+        // obj.halo = function() {
+        //     console.log(this);
+        //     console.log("halo");
+        // };
+        // obj.halo();
+        //
+        //
+        //this mengembalikan object yang baru dibuat (key new)
+        // function Halo() {
+        //     console.log(this);
+        //     console.log("halo");
+        // }
+        // new Halo();
+        //
+        //
+        //
+        // THIS - keyword special yg secara otomatis didefinisikan setiap membuat function/ object
+        // window - object global
+        // var a = 10;
+        // console.log(this.a);
+        //
+        //
+    </script>
+</body>
+
+</html>

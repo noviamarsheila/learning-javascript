@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Destructuring Variable</title>
+	</head>
+	<body>
+		<p>Destructuring Variable : expression pd javascript yg membuat kita dapat membongkar nilai dari array atau properti dari object kedalam varibale yg terpisah.</p>
+
+		<script>
+			// contoh
+			// array
+			const coba = ["satu", "dua", "tiga"];
+			const [x, y, z] = coba;
+			console.log(x);
+			// skipping
+			// const [a, , c] = coba;
+
+			// object
+			const mhs = {
+				nama: "Sheila",
+				umur: 18,
+				email: "noviasheila123@gmail.com",
+			};
+			const { nama, umur, email } = mhs;
+			console.log(umur);
+			//
+			//swap items
+			let a = 1;
+			let b = 2;
+
+			[a, b] = [b, a];
+			console.log(a);
+
+			//
+			// return value pada func
+			function boba() {
+				return [1, 2];
+			}
+			const [d, s] = boba();
+			console.log(d);
+
+			//
+			// rest parameter
+			const [f, g, ...val] = [2, 3, 4, 6];
+			console.log(g);
+			console.log(val[1]);
+		</script>
+	</body>
+</html>

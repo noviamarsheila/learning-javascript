@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Dom Manipulation</title>
+		<style>
+			* {
+				border: 2px solid #dedede;
+				padding: 15px;
+				margin: 15px;
+			}
+			html {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				max-width: 600px;
+				margin: 30px auto;
+				font-family: sans-serif;
+				color: #333;
+			}
+			.biru-muda {
+				background-color: lightblue;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 id="judul">Hello World</h1>
+		<div id="container">
+			<section id="a">
+				<p class="p1">paragraf 1</p>
+				<a href="http://instagram.com/sandhikagalih">Instagram Sandhika Galih</a>
+				<p class="p2">paragraf 2</p>
+				<p class="p3">paragraf 3</p>
+			</section>
+			<section id="b">
+				<p>paragraf 4</p>
+				<ul>
+					<li>item 1</li>
+					<li>item 2</li>
+					<li>item 3</li>
+				</ul>
+			</section>
+		</div>
+
+		<script>
+			// DOM Manipulation Method
+			// Manipulasi Node dan element
+			// Beberapa method
+			// element.innerHTML -> mengubah isi element yg diseleksi
+			// element.style.<property> -> mengubah style
+			// element.setAttribute ->memanipulasi attribute dalam element
+			// element.classList -> menipulasi class
+			// .....dll
+			//
+			// var judul = document.getElementById("judul");
+			// var a = document.querySelector("section#a a");
+			// console.log(a.getAttribute("href"));
+			// judul.setAttribute("name", "sheila");
+			// judul.setAttribute("class", "sheila");
+			// judul.removeAttribute("name");
+			// judul.removeAttribute("class");
+			// judul.style.color = "lightblue";
+			// judul.style.backgroundColor = "salmon";
+			// judul.innerHTML = "<em><u>Novia Marsheila Louisyana</u><em>";
+			//
+			// var secA = document.querySelector("section#a");
+			// secA.innerHTML = "HAI";
+			//
+			// element.classList.add()
+			// element.classList.remove()
+			// element.classList.toggle() -> menambahkan class baru jika tidak ada, jika ada maka akan dihapus
+			// element.classList.item() -> mengetahui class tertentu
+			// element.classList.contains() -> cek class tertentu
+			// element.classList.replace()
+
+			// var p2 = document.querySelector(".p2");
+			//
+			//
+			//
+			//
+			// MANIPULASI NODE
+			// document.createElement()
+			// document.createTextNode()
+			// node.appendChild()
+			// node.insertbefore()
+			// parentNode.removeChild()
+			// parentNode.replaceChild()
+			// ... dll
+			//
+			//
+			// let pBaru = document.createElement("p");
+			// let teksPBaru = document.createTextNode("Novia Marsheila L");
+			// pBaru.appendChild(teksPBaru);
+
+			// sectionA.appendChild(pBaru);
+
+			let listBaru = document.createElement("li");
+			let isiList = document.createTextNode("Item baru nih!");
+			listBaru.appendChild(isiList);
+
+			let ul = document.querySelector("section#b ul");
+			let li2 = ul.querySelector("section#b ul li:n th-child(2)");
+
+			ul.insertBefore(listBaru, li2);
+
+			let sectionA = document.getElementById("a");
+			let link = document.getElementsByTagName("a")[0];
+
+			sectionA.removeChild(link);
+
+			let secB = document.getElementById("b");
+			let p4 = secB.querySelector("p");
+
+			let h2Baru = document.createElement("h2");
+			let textH2 = document.createTextNode("H2 baru");
+			h2Baru.appendChild(textH2);
+
+			secB.replaceChild(h2Baru, p4);
+		</script>
+	</body>
+</html>
